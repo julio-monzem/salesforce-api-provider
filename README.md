@@ -36,12 +36,19 @@ Arquitetura de APIs
 
 ## 🚀 Funcionalidades
 🔹 API REST com CRUD completo:
+
 Método	Rota	Ação
+
 GET	/v1/customers	Listar
+
 GET	/v1/customers/{id}	Buscar
+
 POST	/v1/customers	Criar
+
 PUT	/v1/customers/{id}	Atualizar
+
 DELETE	/v1/customers/{id}	Excluir
+
 🔹 Segurança:
 
 OAuth 2.0
@@ -62,17 +69,19 @@ Padrões profissionais de API
 
 ## 🏗 Estrutura de Pastas (SFDX)
 force-app/
- └── main/
-      └── default/
-           ├── classes/
-           │    ├── CustomerRestService.cls
-           │    └── CustomerRestServiceTest.cls
-           ├── connectedApps/
-           │    └── ApiProviderApp.connectedApp-meta.xml
-           ├── objects/
-           │    └── Customer__c/
-           └── permissionsets/
-                └── ApiProvider.permissionset-meta.xml
+	
+	└── main/
+	    └── default/
+	        ├── classes/
+	        │   ├── CustomerRestService.cls
+	        │   └── CustomerRestServiceTest.cls
+	        ├── connectedApps/
+	        │   └── ApiProviderApp.connectedApp-meta.xml
+	        ├── objects/
+	        │   └── Customer__c/
+	        └── permissionsets/
+	            └── ApiProvider.permissionset-meta.xml
+
 
 ## 🛠 Pré-Requisitos
 Ferramentas
