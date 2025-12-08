@@ -9,15 +9,22 @@ global class CustomerSoapService {
             LIMIT 1
         ];
 
-        return toDTO(c);
+        // Monta o DTO diretamente
+        CustomerSoapDTO dto = new CustomerSoapDTO();
+        dto.Id     = c.Id;
+        dto.Name   = c.Name;
+        dto.Email  = c.Email__c;
+        dto.Phone  = c.Phone__c;
+        dto.Status = c.Status__c;
+        return dto;
     }
 
     // CREATE
     webservice static String createCustomer(CustomerSoapDTO dto) {
         Customer__c c = new Customer__c(
-            Name = dto.Name,
-            Email__c = dto.Email,
-            Phone__c = dto.Phone,
+            Name      = dto.Name,
+            Email__c  = dto.Email,
+            Phone__c  = dto.Phone,
             Status__c = dto.Status
         );
         insert c;
@@ -37,9 +44,9 @@ global class CustomerSoapService {
             LIMIT 1
         ];
 
-        if (dto.Name != null)  c.Name      = dto.Name;
-        if (dto.Email != null) c.Email__c  = dto.Email;
-        if (dto.Phone != null) c.Phone__c  = dto.Phone;
+        if (dto.Name   != null) c.Name      = dto.Name;
+        if (dto.Email  != null) c.Email__c  = dto.Email;
+        if (dto.Phone  != null) c.Phone__c  = dto.Phone;
         if (dto.Status != null) c.Status__c = dto.Status;
 
         update c;
@@ -54,16 +61,5 @@ global class CustomerSoapService {
             LIMIT 1
         ];
         delete c;
-    }
-
-    // Utility converter
-    private static CustomerSoapDTO toDTO(Customer__c c) {
-        CustomerSoapDTO dto = new CustomerSoapDTO();
-        dto.Id = c.Id;
-        dto.Name = c.Name;
-        dto.Email = c.Email__c;
-        dto.Phone = c.Phone__c;
-        dto.Status = c.Status__c;
-        return dto;
     }
 }

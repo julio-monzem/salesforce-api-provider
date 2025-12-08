@@ -6,7 +6,13 @@
  <types>
   <xsd:schema elementFormDefault="qualified" targetNamespace="http://soap.sforce.com/schemas/class/CustomerSoapDTO">
    <xsd:complexType name="CustomerSoapDTO">
-    <xsd:sequence/>
+    <xsd:sequence>
+     <xsd:element name="Email" minOccurs="0" type="xsd:string" nillable="true"/>
+     <xsd:element name="Id" minOccurs="0" type="xsd:string" nillable="true"/>
+     <xsd:element name="Name" minOccurs="0" type="xsd:string" nillable="true"/>
+     <xsd:element name="Phone" minOccurs="0" type="xsd:string" nillable="true"/>
+     <xsd:element name="Status" minOccurs="0" type="xsd:string" nillable="true"/>
+    </xsd:sequence>
    </xsd:complexType>
   </xsd:schema>
   <xsd:schema elementFormDefault="qualified" targetNamespace="http://soap.sforce.com/schemas/class/CustomerSoapService">
@@ -286,7 +292,7 @@
  <service name="CustomerSoapServiceService">
   <documentation></documentation>
   <port binding="tns:CustomerSoapServiceBinding" name="CustomerSoapService">
-   <soap:address location="https://inspiration-ability-256-dev-ed.scratch.my.salesforce.com/services/Soap/class/CustomerSoapService"/>
+   <soap:address location="https://orgfarm-8fcf3e5625-dev-ed.develop.my.salesforce.com/services/Soap/class/CustomerSoapService"/>
   </port>
  </service>
 </definitions>

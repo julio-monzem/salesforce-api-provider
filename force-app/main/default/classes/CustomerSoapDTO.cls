@@ -1,7 +1,7 @@
 global class CustomerSoapDTO {
-    public String Id;
-    public String Name;
-    public String Email;
-    public String Phone;
-    public String Status;
+    webservice String Id;
+    webservice String Name;
+    webservice String Email;
+    webservice String Phone;
+    webservice String Status;
 }
