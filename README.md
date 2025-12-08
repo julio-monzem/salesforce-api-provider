@@ -96,3 +96,58 @@ Set environment variable:
 Authenticate with OAuth.
 
 Test each endpoint directly.
+
+## 3. SOAP API — Explanation & Node.js Client Testing
+
+### Generating the WSDL
+
+Salesforce automatically generates the WSDL for the Apex class:
+
+Setup → Apex Classes → CustomerSoapService → Generate WSDL
+
+Save it as:
+
+`docs/wsdl/CustomerSoapService.wsdl`
+
+### Node.js SOAP Client
+Located in:
+
+``external-client-node/``
+
+Install dependencies
+`npm install`
+
+Create a .env file
+```
+INSTANCE_URL=https://yourInstance.salesforce.com
+SESSION_ID=yourSessionId
+```
+
+### Running SOAP Commands
+Create
+`node soapClient.js create`
+
+Get
+`node soapClient.js get 001XXXXXXXXXXXX`
+
+Update
+`node soapClient.js update 001XXXXXXXXXXXX`
+
+Delete
+`node soapClient.js delete 001XXXXXXXXXXXX`
+
+## 4 Project Demonstrations
+
+This project showcases:
+
+REST + SOAP Apex services
+
+OAuth 2.0 authentication
+
+Metadata package deployment
+
+Postman and Node.js consumption
+
+External integration patterns
+
+Organized project structure
