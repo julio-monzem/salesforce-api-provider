@@ -45,3 +45,5 @@ $RECYCLE.BIN/
 **/venv/
 
 .vscode/
+npm-debug.log
+package-lock.json
