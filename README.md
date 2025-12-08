@@ -125,18 +125,22 @@ SESSION_ID=yourSessionId
 
 ### Running SOAP Commands
 Create
+
 `node soapClient.js create`
 
 Get
+
 `node soapClient.js get 001XXXXXXXXXXXX`
 
 Update
+
 `node soapClient.js update 001XXXXXXXXXXXX`
 
 Delete
+
 `node soapClient.js delete 001XXXXXXXXXXXX`
 
-## 4 Project Demonstrations
+## 4. Project Demonstrations
 
 This project showcases:
 
